@@ -84,7 +84,7 @@ for f in temp:
                 temp.remove(f)
 
 print("неповторяющиеся элементы исходного списка:", temp)
-
+print("\nПосле просмотра вебинара список делается 1й командой",set(sp))
 temp.clear()
 for f in sp:
         if sp.count(f) == 1:
