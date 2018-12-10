@@ -17,14 +17,11 @@ def diagonal(mass,row):
     tempmass.remove(row)
     for ch in tempmass:
         i=0
-        j=0   
-        while (8-(ch[0]+i))!=0 or (8-(ch[1]+j))!=0:
-            if row[0] == ch[0]+i:
+        j=0       
+        while (ch[0]+i)<= 8 or (ch[1]+j)<= 8:
+            if row == [ch[0]+i,ch[1]+j]:  
                 print("NO")
-                exit()
-            if row[1] == ch[1]+j:
-                print("NO")
-                exit()
+                exit()            
             i+=1
             j+=1
            
@@ -32,41 +29,33 @@ def diagonal(mass,row):
     for ch in tempmass:
         i = 0
         j = 0
-        while (8 - (ch[0] - i)) != 8 or (8 - (ch[1] - j)) != 8:
-            if row[0] == ch[0]-i:
+        while (ch[0]-i)>= 0 or (ch[1]-j)>= 0:
+            if row == [ch[0]-i,ch[1]-j]:
                 print("NO")
-                exit()
-            if row[1] == ch[1]-j:
-                print("NO")
-                exit()
+                exit() 
             i+=1
             j+=1
     
     for ch in tempmass:
         i = 0
         j = 0
-        while (8 - (ch[0] + i)) != 0 or (8 - (ch[1] - j)) != 8:
-            if row[0] == ch[0]+i:
+        while (ch[0]+i)<= 8 or (ch[1]-j)>= 0:
+            if row == [ch[0]+i,ch[1]-j]:
                 print("NO")
-                exit()
-            if row[1] == ch[1]-j:
-                print("NO")
-                exit()
-            i += 1
-            j += 1
+                exit() 
+            i+=1
+            j+=1
     
+
     for ch in tempmass:
         i = 0
         j = 0
-        while (8 - (ch[0] - i)) != 8 or (8 - (ch[1] + j)) != 0:
-            if row[0] == ch[0]-i:
+        while (ch[0]-i)>=0 or (ch[1]+j)<=8:
+            if row == [ch[0]-i,ch[1]+j]:
                 print("NO")
-                exit()
-            if row[1] == ch[1]+j:
-                print("NO")
-                exit()
-            i += 1
-            j += 1
+                exit() 
+            i+=1
+            j+=1
 
 
 
