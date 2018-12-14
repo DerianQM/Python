@@ -22,7 +22,7 @@ class triangle:
     def H (self):
         return round(abs((self.y2-self.z2)*self.x1 + (self.z1-self.y1)*self.x2 + (self.y1*self.z2 - self.z1*self.y2))/sqrt((self.y2 - self.z2)**2 + (self.z1- self.y1)**2),2)
     def P (self):
-        return round( (sqrt (abs((self.y1-self.x1)**2-(self.y2-self.x2)**2)) + sqrt(abs((self.z1-self.y1)**2-(self.z2-self.y2)**2)) + sqrt(abs((self.z1-self.x1)**2-(self.z2-self.x2)**2))),2)
+        return round((sqrt (abs((self.y1-self.x1)**2-(self.y2-self.x2)**2)) + sqrt(abs((self.z1-self.y1)**2-(self.z2-self.y2)**2)) + sqrt(abs((self.z1-self.x1)**2-(self.z2-self.x2)**2))),2)
 
 def createPoint():  # функция для создания списка координат, который введет пользователь
     listNew = []
