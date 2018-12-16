@@ -86,8 +86,8 @@ n = 8  # для трапеции
 mass = createPoint(n)
 
 trp = trapeze(mass[0], mass[1], mass[2], mass[3], mass[4], mass[5], mass[6], mass[7])
-check = trp.checktrp()
-if check == 0:
+
+if trp.checktrp() == 0:
     print("Трапеция не равнобокая")
 else:
     print("Трапеция равнобокая")
